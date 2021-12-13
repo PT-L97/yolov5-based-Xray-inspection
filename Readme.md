@@ -1,6 +1,6 @@
 # YOLOv5-based deep Learning in Automated security inspection 
 This repo is the implementation of 'YOLOv5-based deep Learning in Automated security inspection'
-<img src="result.png" width="400" height="400">
+
 ![image](result.png)  
 
 For more information, please see the result.
@@ -72,7 +72,7 @@ to create negative samples blank *`.xml`.
 Then, add the images and xml file to *`images/` and *`xml/` separatively.
 
 # Proposed structure
-<img src="main.png" width="300" height="500">
+<img src="main.png" style="zoom:50%">
 
 The model adds MHSA(which is in BotNet) and BiFPN in original backbone, ASFF on original Head. I also tries TTA and CBAM but the mAP decreases with inference time increases. 
 
@@ -97,14 +97,15 @@ $ python detect.py --weights runs/train/exp70/weights/best.pt --source data/myda
 ```
 For the *`P00001.jpg`, 
 <br/>
-<img src="data/mydata/detect_img/P00001.jpg" width="324" height="324">
+<img src="data/mydata/detect_img/P00001.jpg" style="zoom:50%">
 
 Here is the feature map visualization after the first convolutional operation:
 <br/>
-<img src="runs/detect/exp70/P00001/stage0_Conv_features.png" width="324" height="324">
+<img src="runs/detect/exp70/P00001/stage0_Conv_features.png" style="zoom:50%">
 
 By adding these tricks, we could finally extract specific features from each channel like:
-<img src="runs/detect/exp70/P00001/stage26_ASFFV5_features.png" width="324" height="324">
+<br/>
+<img src="runs/detect/exp70/P00001/stage26_ASFFV5_features.png" style="zoom:50%">
 
 For more feature visualization, please see *`runs/detect`.
 
@@ -121,7 +122,7 @@ $ python val.py --weights runs/train/exp70/weights/best.pt --data data/mydata1/m
 
 Here is the result example of this model:
 <br/>
-<img src="runs/val/-trxp70-all-p-tr/val_batch2_pred.jpg" width="324" height="324">
+<img src="runs/val/-trxp70-all-p-tr/val_batch2_pred.jpg" style="zoom:50%">
 
 # Ensemble(not used in this experiment)
 
@@ -135,7 +136,7 @@ $ python wbf.py
 
 Here is the result of *`train.py`
 <br/>
-<img src="runs/train/exp70/results.png" width="324" height="324">
+<img src="runs/train/exp70/results.png" style="zoom:50%">
 
 If you have any question, please discuss with me by sending email to *`pl1999@nyu.edu`  
 
