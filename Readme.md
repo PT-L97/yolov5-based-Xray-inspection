@@ -100,13 +100,15 @@ Running
 ```bash
 $ python detect.py --weights runs/train/exp70/weights/best.pt --source data/mydata1/detect_img --visualize
 ```
-For the *`P00001.jpg`, ![image](data/mydata/detect_img/P00001.jpg)
+For the *`P00001.jpg`, 
+
+![image](data/mydata/detect_img/P00001.jpg)
 
 Here is the feature map visualization after the first convolutional operation:
-![image](runs\detect\exp70\P00001\stage0_Conv_features.png)
+![image](runs/detect/exp70/P00001/stage0_Conv_features.png)
 
 By adding these tricks, we could finally extract specific features from each channel like:
-![image](runs\detect\exp70\P00001\stage26_ASFFV5_features.png) 
+![image](runs/detect/exp70/P00001/stage26_ASFFV5_features.png) 
 
 For more feature visualization, please see *'runs/detect'.
 
@@ -122,7 +124,7 @@ $ python val.py --weights runs/train/exp70/weights/best.pt --data data/mydata1/m
 ```
 
 Here is the result example of this model:
-![image](runs\val\-trxp70-all-p-tr\val_batch2_pred.jpg)  
+![image](runs/val/-trxp70-all-p-tr/val_batch2_pred.jpg)  
 
 # Ensemble(not used in this experiment)
 
@@ -135,7 +137,7 @@ $ python wbf.py
 # Train
 
 Here is the result of *`train.py`
-![image](runs\train\exp70\results.png)  
+![image](runs/train/exp70/results.png)  
 
 If you have any question, please discuss with me by sending email to *`pl1999@nyu.edu`  
 
