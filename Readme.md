@@ -24,8 +24,9 @@ I used the whole posive samples (8,915 images) and annotations:
 [Baidu Drive(pw: ting)](https://pan.baidu.com/s/19wtjZjr4s6T7WLIDwg4agQ) to train in this experiments.
 
 Here are labels related distribution:
-![image](runs\train\exp70\labels_correlogram.jpg)  
-![image](runs\train\exp70\labels.jpg) 
+<img src="runs/train/exp70/labels_correlogram.jpg" width="324" height="324">
+![image](runs/train/exp70/labels_correlogram.jpg)  
+![image](runs/train/exp70/labels.jpg) 
 
 The SIXray10 dataset(which is not employed in this paper), which includes all posive samples with 10x negative samples is 
 
@@ -110,7 +111,7 @@ Here is the feature map visualization after the first convolutional operation:
 By adding these tricks, we could finally extract specific features from each channel like:
 ![image](runs/detect/exp70/P00001/stage26_ASFFV5_features.png) 
 
-For more feature visualization, please see *'runs/detect'.
+For more feature visualization, please see *`runs/detect`.
 
 # Inference
 
