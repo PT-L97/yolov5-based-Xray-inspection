@@ -25,8 +25,7 @@ I used the whole posive samples (8,915 images) and annotations:
 
 Here are labels related distribution:
 <img src="runs/train/exp70/labels_correlogram.jpg" width="324" height="324">
-![image](runs/train/exp70/labels_correlogram.jpg)  
-![image](runs/train/exp70/labels.jpg) 
+<img src="runs/train/exp70/labels.jpg" width="324" height="324">
 
 The SIXray10 dataset(which is not employed in this paper), which includes all posive samples with 10x negative samples is 
 
@@ -77,14 +76,13 @@ to create negative samples blank *`.xml`.
 Then, add the images and xml file to *`images/` and *`xml/` separatively.
 
 # Proposed structure
-
-![image](main.png)
+<img src="main.png" width="324" height="324">
 
 The model adds MHSA(which is in BotNet) and BiFPN in original backbone, ASFF on original Head. I also tries TTA and CBAM but the mAP decreases with inference time increases. 
 
-For codes, please see [model/read.me](models\readme.md)
+For codes, please see [model/read.me](models/readme.md)
 
-All these tricks have been already added to the normal code *`models\common.py` and *`models\yolo.py`
+All these tricks have been already added to the normal code *`models/common.py` and *`models/yolo.py`
 
 The structure is inspired by feature visualization.
 
@@ -102,14 +100,13 @@ Running
 $ python detect.py --weights runs/train/exp70/weights/best.pt --source data/mydata1/detect_img --visualize
 ```
 For the *`P00001.jpg`, 
-
-![image](data/mydata/detect_img/P00001.jpg)
+<img src="data/mydata/detect_img/P00001.jpg" width="324" height="324">
 
 Here is the feature map visualization after the first convolutional operation:
-![image](runs/detect/exp70/P00001/stage0_Conv_features.png)
+<img src="runs/detect/exp70/P00001/stage0_Conv_features.png" width="324" height="324">
 
 By adding these tricks, we could finally extract specific features from each channel like:
-![image](runs/detect/exp70/P00001/stage26_ASFFV5_features.png) 
+<img src="runs/detect/exp70/P00001/stage26_ASFFV5_features.png" width="324" height="324">
 
 For more feature visualization, please see *`runs/detect`.
 
@@ -125,7 +122,7 @@ $ python val.py --weights runs/train/exp70/weights/best.pt --data data/mydata1/m
 ```
 
 Here is the result example of this model:
-![image](runs/val/-trxp70-all-p-tr/val_batch2_pred.jpg)  
+<img src="runs/val/-trxp70-all-p-tr/val_batch2_pred.jpg" width="324" height="324">
 
 # Ensemble(not used in this experiment)
 
@@ -138,7 +135,7 @@ $ python wbf.py
 # Train
 
 Here is the result of *`train.py`
-![image](runs/train/exp70/results.png)  
+<img src="runs/train/exp70/results.png" width="324" height="324">
 
 If you have any question, please discuss with me by sending email to *`pl1999@nyu.edu`  
 
