@@ -100,7 +100,7 @@ Running
 ```bash
 $ python detect.py --weights runs/train/exp70/weights/best.pt --source data/mydata1/detect_img --visualize
 ```
-For the *`P00001.jpg`, ![image](data\mydata\detect_img\P00001.jpg)
+For the *`P00001.jpg`, ![image](data/mydata/detect_img/P00001.jpg)
 
 Here is the feature map visualization after the first convolutional operation:
 ![image](runs\detect\exp70\P00001\stage0_Conv_features.png)
