@@ -1,5 +1,6 @@
 # YOLOv5-based deep Learning in Automated security inspection 
 This repo is the implementation of 'YOLOv5-based deep Learning in Automated security inspection'
+<img src="result.png" width="400" height="400">
 ![image](result.png)  
 
 For more information, please see the result.
@@ -17,19 +18,14 @@ In this experiment, I used NVIDIA Geforce RTX 2080ti with Ubuntu 18.04, cuda 11.
 
 # Dataset
 
-SIXray dataset: 
-
-I used the whole posive samples (8,915 images) and annotations:
-
-[Baidu Drive(pw: ting)](https://pan.baidu.com/s/19wtjZjr4s6T7WLIDwg4agQ) to train in this experiments.
+* `SIXray dataset`
+    * `the whole posive samples (8,915 images) and annotations`(trained in this experiments):  [Baidu Drive(pw: ting)](https://pan.baidu.com/s/19wtjZjr4s6T7WLIDwg4agQ) 
+    * `The SIXray10, which includes all posive samples with 10x negative samples` (which is not employed in this paper):  [Baidu Drive(pw: gcdw)](https://pan.baidu.com/s/1zqsVnfahGDU7d-suDyiT5Q). 
 
 Here are labels related distribution:
+<br/>
 <img src="runs/train/exp70/labels_correlogram.jpg" width="324" height="324">
 <img src="runs/train/exp70/labels.jpg" width="324" height="324">
-
-The SIXray10 dataset(which is not employed in this paper), which includes all posive samples with 10x negative samples is 
-
-[Baidu Drive(pw: gcdw)](https://pan.baidu.com/s/1zqsVnfahGDU7d-suDyiT5Q)
 
 # Convert labels
 This paper would use VOC XML Annotation Format(yolo labels).
@@ -76,7 +72,7 @@ to create negative samples blank *`.xml`.
 Then, add the images and xml file to *`images/` and *`xml/` separatively.
 
 # Proposed structure
-<img src="main.png" width="324" height="324">
+<img src="main.png" width="300" height="500">
 
 The model adds MHSA(which is in BotNet) and BiFPN in original backbone, ASFF on original Head. I also tries TTA and CBAM but the mAP decreases with inference time increases. 
 
@@ -100,9 +96,11 @@ Running
 $ python detect.py --weights runs/train/exp70/weights/best.pt --source data/mydata1/detect_img --visualize
 ```
 For the *`P00001.jpg`, 
+<br/>
 <img src="data/mydata/detect_img/P00001.jpg" width="324" height="324">
 
 Here is the feature map visualization after the first convolutional operation:
+<br/>
 <img src="runs/detect/exp70/P00001/stage0_Conv_features.png" width="324" height="324">
 
 By adding these tricks, we could finally extract specific features from each channel like:
@@ -122,6 +120,7 @@ $ python val.py --weights runs/train/exp70/weights/best.pt --data data/mydata1/m
 ```
 
 Here is the result example of this model:
+<br/>
 <img src="runs/val/-trxp70-all-p-tr/val_batch2_pred.jpg" width="324" height="324">
 
 # Ensemble(not used in this experiment)
@@ -135,6 +134,7 @@ $ python wbf.py
 # Train
 
 Here is the result of *`train.py`
+<br/>
 <img src="runs/train/exp70/results.png" width="324" height="324">
 
 If you have any question, please discuss with me by sending email to *`pl1999@nyu.edu`  
