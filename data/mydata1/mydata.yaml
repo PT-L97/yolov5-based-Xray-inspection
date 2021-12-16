@@ -1,9 +1,0 @@
-train: /root/yolov5-master/data/mydata1/train.txt
-val: /root/yolov5-master/data/mydata1/val.txt
-test: /root/yolov5-master/data/mydata1/test.txt
-
-# number of classes
-nc: 5
-
-# class name
-names: ["Gun","Knife","Wrench", "Pliers", "Scissors"]
