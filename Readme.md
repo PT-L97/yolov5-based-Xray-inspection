@@ -97,7 +97,7 @@ $ python detect.py --weights runs/train/exp70/weights/best.pt --source data/myda
 ```
 For the *`P00001.jpg`, 
 <br/>
-<img src="data/mydata/detect_img/P00001.jpg" style="zoom:50%">
+<img src="data/mydata1/detect_img/P00001.jpg" style="zoom:50%">
 
 Here is the feature map visualization after the first convolutional operation:
 <br/>
